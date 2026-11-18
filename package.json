@@ -1,0 +1,56 @@
+{
+  "name": "dsh-identity-gate",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "四重身份门禁：打开 DSH 时按顺序验证身份名称、编号、权限等级与密码，全部正确才解锁；支持手动锁定、可调锁定时机与密保恢复。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "lock",
+    "password",
+    "gate",
+    "identity",
+    "privacy",
+    "startup"
+  ],
+  "author": "Zhang Minghao",
+  "license": "MIT",
+  "icon": "icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

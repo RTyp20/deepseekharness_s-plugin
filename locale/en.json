@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "App lock",
+    "description": "Locks the DSH interface with a password on launch or when you step away; background work keeps running.",
+    "detail": "docs/DETAIL.md"
+  }
+}

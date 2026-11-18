@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "启动锁",
+    "description": "启动 DSH 或离开时用密码锁住界面，防止他人随手操作。后台任务不受影响。",
+    "detail": "docs/DETAIL.md"
+  }
+}
